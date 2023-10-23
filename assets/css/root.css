@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+  --fs-xl: 64px;
+  --fs-lg: 28px;
+  --fs-md: 24px;
+  --fs-sm: 16px;
+  /* ----colors-------- */
+
+  --color-white: #fff;
+  --color-sky: #1eadb6;
+}
+.fs_xl {
+  font-size: var(--fs-xl);
+}
+.fs_lg {
+  font-size: var(--fs-lg);
+}
+.fs_md {
+  font-size: var(--fs-md);
+}
+.fs_sm {
+  font-size: var(--fs-sm);
+}
+
+.bg_sky {
+  background-color: var(--color-sky);
+}
+.color_white {
+  color: var(--color-white);
+}
+.color_sky {
+  color: var(--color-sky);
+}
+.bg_white {
+  background-color: var(--color-white);
+}
+.ff_audio {
+  font-family: "Audiowide";
+}
+.ff_mont {
+  font-family: "montserrat";
+}
+@media (max-width: 576px) {
+  :root {
+    --fs-xl: 28px !important;
+    --fs-lg: 28px;
+    --fs-md: 24px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --fs-xl: 44px;
+    --fs-lg: 28px;
+    --fs-md: 24px;
+  }
+}
