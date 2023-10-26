@@ -2,6 +2,12 @@
 function shownav() {
   document.getElementById("nav").classList.toggle("show");
 }
+function cross() {
+  document.getElementsByClassName("cross1").add.classList("rotae_45")
+    
+  
+  
+}
 // -----------------GAMEPLAY---------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.getElementById("playButton");

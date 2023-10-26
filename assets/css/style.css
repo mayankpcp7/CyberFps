@@ -28,7 +28,7 @@ ul li {
   border: 1px solid #1eadb6;
   margin-bottom: 5px;
 }
-.circle {
+.rota .circle {
   width: 234px;
   height: 234px;
   background: linear-gradient(137deg, #0ff 0%, #f63409 97.23%);
@@ -101,8 +101,9 @@ ul li {
   transition: 300ms;
 }
 .mybtn:hover {
-  background-color: #1eadb6;
-  color: black;
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(30, 173, 182, 1);
+  -moz-box-shadow: 0px 0px 16px 1px rgb(255, 255, 255);
+  box-shadow: 0px 0px 16px 1px rgb(255, 255, 255);
 }
 .robot {
   transform: translateY(25%) translateX(16%);
@@ -111,7 +112,7 @@ ul li {
   padding-top: 15px;
 }
 .transition_300 {
-  transition: 300ms;
+  transition: 300ms !important;
 }
 ul li {
   border: 1px solid white;
@@ -422,7 +423,7 @@ ul li a {
   width: 70%;
 }
 .hover_scale:hover {
-  transform: scale(0.9);
+  transform: scale(0.9) !important;
 }
 .team {
   position: relative !important;
