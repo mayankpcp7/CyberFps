@@ -1,12 +1,10 @@
 // ---------------Navbar--------------------------
 function shownav() {
   document.getElementById("nav").classList.toggle("show");
+  document.body.classList.toggle("overflow-hidden")
 }
 function cross() {
-  document.getElementsByClassName("cross1").add.classList("rotae_45")
-    
-  
-  
+  document.getElementsByClassName("cross1").add.classList("rotae_45");
 }
 // -----------------GAMEPLAY---------------------------------
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,5 +30,4 @@ setTimeout(() => {
   document.body.classList.remove("overflow-hidden");
 }, 2000);
 // -----aos------------------
-src = "https://unpkg.com/aos@2.3.1/dist/aos.js" >
-  AOS.init();
+src = "https://unpkg.com/aos@2.3.1/dist/aos.js" > AOS.init();

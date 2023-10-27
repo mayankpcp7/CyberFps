@@ -28,7 +28,29 @@ ul li {
   border: 1px solid #1eadb6;
   margin-bottom: 5px;
 }
-.rota .circle {
+.cross1 {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  min-height: 4px;
+  width: 30px;
+  background-color: #000000;
+  border: 1px solid #1eadb6;
+  margin-bottom: 5px;
+  transform: rotate(45deg);
+}
+.cross2 {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  min-height: 4px;
+  width: 30px;
+  background-color: #000000;
+  border: 1px solid #1eadb6;
+  margin-bottom: 5px;
+  transform: rotate(-45deg);
+}
+ .circle {
   width: 234px;
   height: 234px;
   background: linear-gradient(137deg, #0ff 0%, #f63409 97.23%);
@@ -48,8 +70,9 @@ ul li {
 }
 .topright_circle {
   position: absolute;
-  right: 0%;
+  right: 20%;
   top: 0%;
+
 }
 .bottomright_circle {
   position: absolute;
@@ -65,6 +88,9 @@ ul li {
 }
 .nav_icons:hover {
   transform: scale(1.3);
+}
+.translate_y {
+  transform: translateY(20%) !important;
 }
 
 /* Track */
@@ -103,13 +129,11 @@ ul li {
 .mybtn:hover {
   -webkit-box-shadow: 0px 0px 16px 1px rgba(30, 173, 182, 1);
   -moz-box-shadow: 0px 0px 16px 1px rgb(255, 255, 255);
-  box-shadow: 0px 0px 16px 1px rgb(255, 255, 255);
+  box-shadow: 0px 0px 16px 1px rgb(0, 0, 0);
 }
 .robot {
-  transform: translateY(25%) translateX(16%);
-  max-width: 724px;
-  max-height: 1479px;
-  padding-top: 15px;
+  position: absolute;
+  bottom: 0%;
 }
 .transition_300 {
   transition: 300ms !important;
@@ -232,11 +256,54 @@ ul li a {
   opacity: 100%;
 }
 /* -------------- Gameplay------------------ */
+.topframe {
+  position: absolute;
+  top: -2%;
+  right: -2%;
+}
+.bottomframe {
+  position: absolute;
+  bottom: -2%;
+  left: -2%;
+}
+.rightvec {
+  position: absolute;
+  top: -2%;
+  left: 15%;
+}
+.leftvec {
+  position: absolute;
+  bottom: -2%;
+  right: 15%;
+}
 .play {
   transform: translate (-50% -50%);
   position: absolute;
   z-index: 2;
 }
+.top_corner {
+  position: absolute;
+  top: -9%;
+  left: -2%;
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid rgb(255, 255, 255);
+  transform: rotate(45deg);
+}
+.bottom_corner {
+  position: absolute;
+  bottom: -9%;
+  right: -2%;
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid rgb(255, 255, 255);
+  transform: rotate(222deg);
+}
+
 .d_none {
   display: none !important;
 }
@@ -443,6 +510,14 @@ ul li a {
 .z_400 {
   z-index: 400;
 }
+@media (max-width: 1400px) {
+  .top_corner {
+    top: -11%;
+  }
+  .bottom_corner {
+    bottom: -11%;
+  }
+}
 @media (min-width: 1200px) {
   .min-vh-xl-100 {
     height: 100vh;
@@ -463,21 +538,42 @@ ul li a {
     left: -100%;
     transition: 300ms;
   }
+  .top_corner {
+    top: -13%;
+  }
+  .bottom_corner {
+    bottom: -13%;
+    right: -3%;
+  }
   .show {
     left: 0%;
   }
   .robot {
     position: absolute !important;
-    bottom: -50%;
     right: 0%;
-    max-width: 500px !important;
+    max-width: 500px;
+  }
+  .w_lg_75 {
+    width: 40%;
   }
 }
+
 @media (max-width: 992px) {
   .robot {
     position: absolute;
     bottom: 0%;
-    max-width: 200px !important;
+    right: -4% !important;
+  }
+  .w_lg_75 {
+    width: 50%;
+  }
+  .top_corner {
+    top: -18%;
+    left: -3%;
+  }
+  .bottom_corner {
+    bottom: -18%;
+    right: -3%;
   }
   .gameplay::before {
     content: "";
@@ -488,6 +584,11 @@ ul li a {
     min-height: 2px;
     background-color: #1eadb6;
     transition: 400ms;
+  }
+  .robot {
+    position: absolute !important;
+    right: 0%;
+    max-width: 400px;
   }
   .accordion-item::before {
     content: url(../images/png/rightbottom.png) !important;
@@ -501,6 +602,19 @@ ul li a {
     background: linear-gradient(137deg, #0ff 0%, #f63409 97.23%);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) blur(185px);
     z-index: 0;
+  }
+}
+@media (max-width: 768px) {
+  .gameplay::before {
+    bottom: 0% !important;
+  }
+  .top_corner {
+    top: -38% !important;
+    left: -3%;
+  }
+  .bottom_corner {
+    bottom: -38% !important;
+    right: -5%;
   }
 }
 @media (max-width: 576px) {
@@ -517,6 +631,16 @@ ul li a {
 @media (max-width: 425px) {
   .w_md_100 {
     width: 100%;
+  }
+  .mybtn {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 7px;
+    border: 2px solid #1eadb6;
+    background: transparent;
+    transition: 300ms;
   }
 }
 @media (max-width: 682px) {

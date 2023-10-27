@@ -87,6 +87,10 @@
           class="d-xl-none flex-column align-items-center ps-0 mb-0 gap-4 d-flex mobile_nav"
           id="nav"
         >
+          <div class="cross" onclick="shownav()">
+            <span class="cross1"></span>
+            <span class="cross2"></span>
+          </div>
           <li class="position-relative z-2 bg_about">
             <a href="#">About</a>
           </li>
@@ -106,7 +110,7 @@
         <span class="circle topright_circle"></span>
         <span class="circle bottomright_circle"></span>
         <img
-          class="robot position-absolute"
+          class="robot d-md-block w_lg_75 d-none position-absolute"
           src="./assets/images/png/robot.png"
           alt="robot"
         />
@@ -117,7 +121,9 @@
               src="./assets/images/png/navlogo.webp"
               alt="navlogo"
             />
-            <ul class="d-xl-flex d-none align-items-center ps-0 mb-0">
+            <ul
+              class="d-xl-flex d-none align-items-center ps-0 mb-0 position-relative"
+            >
               <li class="position-relative z-2 bg_about">
                 <a href="#">About</a>
               </li>
@@ -149,39 +155,46 @@
                 alt="discord"
               />
             </div>
-            <div class="d-flex flex-column d-xl-none menu z_400" onclick="shownav()">
-              <span class="nav_icon cross1"></span>
+            <div
+              class="d-flex flex-column d-xl-none menu z-3"
+              onclick="shownav()"
+            >
+              <span class="nav_icon"></span>
               <span class="nav_icon nav_close"></span>
-              <span class="nav_icon cross2"></span>
+              <span class="nav_icon"></span>
             </div>
           </div>
         </nav>
 
         <main class="container py-5 mb-sm-5 mb-xl-0">
-          <div class="row align-items-center">
+          <div
+            class="row justify-content-center justify-content-md-start align-items-center"
+          >
             <div
-              class="col-lg-6 d-sm-block d-flex flex-column d-sm-block mt-xl-5 pt-lg-5"
+              class="col-lg-6 d-sm-block d-flex flex-column align-items-center d-sm-block mt-xl-5 pt-lg-5"
             >
               <img
                 data-aos="fade-right"
                 data-aos-duration="3000"
-                class="w_md_100"
+                class="w-lg-100 w-md-75 w-50"
                 src="./assets/images/webp/main img.webp"
                 alt="main"
               />
               <p
-                class="text-sm-start text-center ff_audio color_white fs_lg"
+                class="text-start ff_audio color_white fs_lg"
                 data-aos="fade-right"
                 data-aos-duration="3000"
               >
                 Web3 Gaming Reimagined
               </p>
               <div
-                class="d-flex align-items-center flex-sm-row flex-column pt-5 gap-4"
+                class="d-flex align-items-center pt-sm-5 pt-3 gap-4"
                 data-aos="fade-up"
                 data-aos-duration="3000"
               >
-                <button class="mybtn ff_audio transition_300 fs_sm text-black bg_sky">
+                <button
+                  class="mybtn ff_audio transition_300 fs_sm text-black bg_sky"
+                >
                   Get Started
                 </button>
                 <button class="mybtn ff_audio fs_sm transition_300 color_white">
@@ -189,14 +202,21 @@
                 </button>
               </div>
             </div>
+            <div class="col-sm-10 col-8 d-md-none translate_y">
+              <img
+                class="w-100"
+                src="./assets/images/png/robot.png"
+                alt="robot"
+              />
+            </div>
           </div>
         </main>
       </header>
       <!-- -------Gameplay------ -->
       <section class="py-5">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center position-relative z-3">
           <h2
-            class="text-center d-inline-block fs_xl ff_audio my-5 pb-5 position-relative gameplay"
+            class="text-center d-inline-block fs_xl ff_audio mt-md-5 mb-md-5 mb-4 pb-md-5 position-relative gameplay"
             data-aos="fade-down"
             data-aos-duration="1500"
           >
@@ -213,16 +233,38 @@
             <img
               class="play position-absolute cu"
               id="playButton"
-              onclick="(playPauseButton)"
               src="./assets/images/png/playbutton.png"
               alt="playbutton"
             />
-            <video
-              class="w-100 position-relative mx_hw"
-              id="video"
-              poster="assets/images/webp/videoposter.webp"
-              src="./assets/images/videos/2 Minutes of Mass Effect_ Andromeda Tech and Combat Gameplay — CES 2017.mp4"
-            ></video>
+            <div class="position-relative w-100">
+              <span class="top_corner d-none d-sm-flex"></span>
+              <span class="bottom_corner d-none d-sm-flex"></span>
+              <img
+                class="w-100 gamevideo"
+                src="./assets/images/gif/gameplay.gif"
+                alt="gameplay"
+              />
+              <img
+                class="topframe"
+                src="./assets/images/png/top_frame.png"
+                alt="top_frame"
+              />
+              <img
+                class="rightvec"
+                src="./assets/images/png/right_vec.png"
+                alt="right_vec"
+              />
+              <img
+                class="leftvec"
+                src="./assets/images/png/left_vec..png"
+                alt="left_vec"
+              />
+              <img
+                class="bottomframe"
+                src="./assets/images/png/bottom_frame.png"
+                alt="bottom_frame"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -260,7 +302,7 @@
               </p>
             </div>
             <div class="col-lg-6">
-              <img 
+              <img
                 data-aos="zoom-in-left"
                 data-aos-duration="1500"
                 class="w-100 hover_scale"
@@ -274,7 +316,7 @@
       <!-- ----------crypto straps--------------->
       <section class="bg-black py-xl-5">
         <div class="container py-5">
-          <div class="row justify-content-between align-items-center">
+          <div class="row justify-content-between align-items-center py-xl-5">
             <div class="col-lg-5 pb-lg-0 pb-5">
               <img
                 data-aos="zoom-out-down"
@@ -284,7 +326,7 @@
                 alt="cryptostraps"
               />
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
               <h2
                 class="text-white ff_audio fs_xl crypto"
                 data-aos="zoom-out-up"
@@ -308,20 +350,12 @@
           </div>
         </div>
       </section>
-      <!-- -------------cypto straps-------- -->
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6"></div>
-          </div>
-        </div>
-      </section>
       <!-- --------------Team--------------- -->
       <section class="py-5 my-xl-5 position-relative">
         <span class="circle topright_circle"></span>
-        <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center pt-xl-5 justify-content-center">
           <h2
-            class="text-center ff_audio fs_xl mb-5 pb-1 position-relative d-inline-block team"
+            class="text-center ff_audio fs_xl pb-1 position-relative mt-5 d-inline-block team"
             data-aos="flip-up"
             data-aos-duration="1500"
           >
@@ -330,7 +364,7 @@
         </div>
 
         <div class="container py-xl-5">
-          <div class="row justify-content-center position-relative">
+          <div class="row justify-content-center position-relative pb-xl-5">
             <div class="col-lg-3 col-md-4 col-sm-6 col-10">
               <img
                 data-aos="flip-down"
