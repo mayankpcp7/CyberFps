@@ -259,12 +259,12 @@ ul li a {
 .topframe {
   position: absolute;
   top: -2%;
-  right: -2%;
+  right: -1%;
 }
 .bottomframe {
   position: absolute;
   bottom: -2%;
-  left: -2%;
+  left: -1%;
 }
 .rightvec {
   position: absolute;
